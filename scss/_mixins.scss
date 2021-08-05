@@ -1,0 +1,38 @@
+// FROM PX TO REM FUNCTION
+@function toRem($value) {
+    $remValue: ($value / 16) + rem;
+    @return  $remValue;
+}
+
+// BREAKPOINTS MIXIN
+$breakpoints: (
+    small: 628px,
+    medium: 870px,
+    large: 999px,
+    extra-large: 1399px
+);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+@mixin breakpoint-less($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (max-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+//TRANSITION MIXIN
+@mixin transition {
+    transition: all 200ms;
+}
+
+@mixin transitionslow {
+    transition: all 700ms;
+}

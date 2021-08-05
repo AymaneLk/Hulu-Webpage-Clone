@@ -1,0 +1,60 @@
+.live {
+    padding: toRem(40);
+    background: #151516;
+
+    @include breakpoint-less(medium) {
+        padding: toRem(10) toRem(30);
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 4px solid #1ce783;
+        border-radius: toRem(12);
+        padding: toRem(100);
+        text-align: center;
+
+        @include breakpoint-less(medium) {
+            padding: toRem(25);
+        }
+
+        .sub-text {
+            max-width: toRem(800);
+        }
+
+        .legal-text {
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .area_link {
+            margin-top: toRem(30);
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f054";
+                padding-left: toRem(5);
+            }
+
+            @include breakpoint-less(medium) {
+                font-size: toRem(14);
+            }
+        }
+
+        .chevron-icon {
+            margin-top: toRem(25);
+            font-size: toRem(18);
+            cursor: pointer;
+
+            @include breakpoint-less(medium) {
+                margin-top: toRem(15);
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.sports {
+    background: url('../img/live-sports.jpg') no-repeat center center / cover;
+    height: 800px;
+    
+    @include breakpoint-less(medium) {
+        background: url('../img/live-sports-small.jpg') no-repeat center center / cover;
+    }
+
+    &_container {
+        padding: toRem(100);
+
+        @include breakpoint-less(medium) {
+            padding: toRem(100) toRem(30);
+        }
+    }
+
+    &_text {
+        max-width: toRem(540);
+
+        .sub-text {
+            font-weight: 600;
+        }
+    }
+
+    &_logos {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-top: toRem(45);
+
+        @include breakpoint-less(medium) {
+            justify-content: flex-start;
+        }
+
+        img {
+            width: toRem(40);
+        }
+
+        & > div {
+            background: url('../img/network-logo-bg.png') no-repeat center center / cover;
+            height: toRem(60);
+            width: toRem(60);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .legal-text {
+        a {
+            text-decoration: underline;
+            font-size: toRem(11);
+        }
+
+        @include breakpoint-less(medium) {
+            font-size: toRem(10);
+        }
+    }
+
+}

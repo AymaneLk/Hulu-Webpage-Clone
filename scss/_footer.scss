@@ -1,0 +1,85 @@
+.footer {
+    background: #ebedf2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    line-height: 1.8;
+    padding: toRem(40) 0;
+
+    &-lists {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint-less(medium) {
+            display: block;
+        }
+        
+        & > ul {
+            margin-right: toRem(100);
+
+            & > li > a {
+                
+                &:hover {
+                    color: #3370BB;
+                }
+            } 
+        }
+
+        .list-head {
+            font-weight: 600;
+            margin: toRem(21) 0;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+    
+    &-devider {
+        border-top: 1px solid #ccc;
+        margin-top: toRem(35);
+    }
+
+    &-final {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        margin-top: toRem(35);
+
+        @include breakpoint-less(medium){
+            display: block;
+        }
+
+        .footer-sm {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-right: toRem(12);
+
+            @include breakpoint-less(medium){
+                text-align: center;
+            }
+        }
+
+        .footer_links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: toRem(11);
+
+            a {
+                text-decoration: none;
+                color: #333;
+
+                &:hover {
+                    color: #3370BB;
+                }
+            }
+
+            @include breakpoint-less(medium) {
+                display: none;
+            }
+        }
+    }
+}
